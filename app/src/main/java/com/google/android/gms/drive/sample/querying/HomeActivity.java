@@ -1,12 +1,12 @@
 /**
  * Copyright 2013 Google Inc. All Rights Reserved.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,16 +15,6 @@
  */
 
 package com.google.android.gms.drive.sample.querying;
-
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.drive.Drive;
-import com.google.android.gms.drive.DriveApi.MetadataBufferResult;
-import com.google.android.gms.drive.Metadata;
-import com.google.android.gms.drive.MetadataBuffer;
-import com.google.android.gms.drive.query.Filters;
-import com.google.android.gms.drive.query.Query;
-import com.google.android.gms.drive.query.SearchableField;
-import com.google.android.gms.drive.widget.DataBufferAdapter;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -41,6 +31,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.drive.Drive;
+import com.google.android.gms.drive.DriveApi.MetadataBufferResult;
+import com.google.android.gms.drive.Metadata;
+import com.google.android.gms.drive.MetadataBuffer;
+import com.google.android.gms.drive.query.Filters;
+import com.google.android.gms.drive.query.Query;
+import com.google.android.gms.drive.query.SearchableField;
+import com.google.android.gms.drive.widget.DataBufferAdapter;
+
 /**
  * An activity that demonstrates sample queries to filter the files on the
  * currently authenticated user's Google Drive. Application is only authorized
@@ -51,7 +51,7 @@ public class HomeActivity extends BaseDriveActivity implements
 
     private static final String TAG = "HomeActivity";
 
-    private static Query[] sQueries = new Query[] {
+    private static Query[] sQueries = new Query[]{
             // files not shared with me
             new Query.Builder().addFilter(Filters.not(
                     Filters.eq(SearchableField.MIME_TYPE, "text/plain")))
